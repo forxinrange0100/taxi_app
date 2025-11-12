@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:taxi_app/pages/login.page.dart';
 import 'package:provider/provider.dart';
 import 'package:taxi_app/providers/db.provider.dart';
@@ -9,9 +8,7 @@ import 'package:taxi_app/providers/driver_in_process_trips.provider.dart';
 import 'package:taxi_app/providers/tracking_trips.provider.dart';
 import 'package:taxi_app/providers/user_account.provider.dart';
 
-Future<void> main() async {
-  await dotenv.load(fileName: ".env");
-
+void main() {
   runApp(
     MultiProvider(
       providers: [

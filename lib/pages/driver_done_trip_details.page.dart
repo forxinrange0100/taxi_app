@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:taxi_app/models/driver_trip_full_report.model.dart';
@@ -21,6 +20,7 @@ class DriverDoneTripDetailsPage extends StatefulWidget {
 
 class _DriverDoneTripDetailsPageState extends State<DriverDoneTripDetailsPage> {
   bool loading = true;
+
   @override
   void initState() {
     super.initState();
@@ -90,7 +90,9 @@ class _DriverDoneTripDetailsPageState extends State<DriverDoneTripDetailsPage> {
                             children: [
                               TileLayer(
                                 urlTemplate:
-                                    "https://api.maptiler.com/tiles/streets/{z}/{x}/{y}.png?key=${dotenv.env['MAPTILER_API_KEY']}",
+                                    'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                subdomains: ['a', 'b', 'c'],
+                                userAgentPackageName: "com.example.taxi_app",
                               ),
                               driverTrip.coordinates.isEmpty
                                   ? SizedBox()

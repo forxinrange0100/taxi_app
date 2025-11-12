@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:provider/provider.dart';
 import 'package:taxi_app/models/driver_trip.model.dart';
 import 'package:taxi_app/models/tracking_trip.model.dart';
@@ -120,7 +119,10 @@ class _DriverInProcessTripDetailsPageState
                                 children: [
                                   TileLayer(
                                     urlTemplate:
-                                        "https://api.maptiler.com/tiles/streets/{z}/{x}/{y}.png?key=${dotenv.env['MAPTILER_API_KEY']}",
+                                        'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+                                    subdomains: ['a', 'b', 'c'],
+                                    userAgentPackageName:
+                                        "com.example.taxi_app",
                                   ),
                                   ttrip.isEmpty
                                       ? SizedBox()
