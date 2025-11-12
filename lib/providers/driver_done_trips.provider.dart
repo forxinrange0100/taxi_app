@@ -9,7 +9,7 @@ class DriverDoneTripsProvider with ChangeNotifier {
   DBProvider dbProvider;
   UserAccountProvider userAccountProvider;
   List<DriverTripReportModel> driverTripReports = [];
-  DriverTripFullReportModel? driverTripReport = null;
+  DriverTripFullReportModel? driverTripReport;
 
   DriverDoneTripsProvider({
     required this.dbProvider,

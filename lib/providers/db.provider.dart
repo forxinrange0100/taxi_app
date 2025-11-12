@@ -53,13 +53,6 @@ class DBProvider with ChangeNotifier {
     ),
   ];
 
-  /// [addDriverInProcessTrip] Agregar nuevo viaje al conductor.
-  /// Se incluye el identificador del conductor [userId]
-  /// [name] nombre asociado al viaje, a modo de diferenciar viajes
-  /// [amount] costo estimado del viaje
-  /// La lógica la agregación se debería gestionar desde la app backend
-  /// el método add solo es a modo de ejemplo
-
   Future<DriverTripModel> addDriverInProcessTrip(
     String name,
     int userId,
@@ -84,10 +77,6 @@ class DBProvider with ChangeNotifier {
     );
     return driverTripModel;
   }
-
-  /// [getDriverInProcessTripsByUserId] Obtener información de los viajes in proceso del conductor.
-  /// En general solo debemos consultar los viajes usando algun identificador del conductor como [userId]
-  /// Sería ideal que la lógica del filtrado según [userId] y [driverTripStatus] se gestione desde la app backend
 
   Future<List<DriverTripModel>> getDriverInProcessTripsByUserId(
     int userId,
