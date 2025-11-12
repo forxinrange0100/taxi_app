@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:provider/provider.dart';
 import 'package:taxi_app/models/driver_trip_full_report.model.dart';
@@ -89,7 +90,7 @@ class _DriverDoneTripDetailsPageState extends State<DriverDoneTripDetailsPage> {
                             children: [
                               TileLayer(
                                 urlTemplate:
-                                    "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                                    "https://api.maptiler.com/tiles/streets/{z}/{x}/{y}.png?key=${dotenv.env['MAPTILER_API_KEY']}",
                               ),
                               driverTrip.coordinates.isEmpty
                                   ? SizedBox()

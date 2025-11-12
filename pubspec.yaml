@@ -10,6 +10,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_dotenv: ^5.0.2
   provider: ^6.1.5+1
   flutter_map: ^8.2.2
   latlong2: ^0.9.1
