@@ -45,3 +45,7 @@
 │       ├── price.widget.dart                   # Muestra el monto del viaje
 │       └── user_roles.widget.dart              # Muestra los roles del usuario
 ```
+
+## Apk de la aplicación
+
+[Apk](app-release.apk)
