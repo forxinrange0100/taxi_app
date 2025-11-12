@@ -11,6 +11,8 @@
 
 ![Demo](az_recorder_faster.gif)
 
+[Demo](az_recorder_faster.gif)
+
 ## Árbol de Carpetas
 
 ```bash
