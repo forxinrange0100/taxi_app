@@ -122,7 +122,7 @@ class _DriverInProcessTripDetailsPageState
                                         'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                                     subdomains: ['a', 'b', 'c'],
                                     userAgentPackageName:
-                                        "com.example.taxi_app",
+                                        "com.example.taxi_app/1.0 (olverarcedev@gmail.com)",
                                   ),
                                   ttrip.isEmpty
                                       ? SizedBox()

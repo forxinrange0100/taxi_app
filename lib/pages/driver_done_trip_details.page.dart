@@ -92,7 +92,8 @@ class _DriverDoneTripDetailsPageState extends State<DriverDoneTripDetailsPage> {
                                 urlTemplate:
                                     'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
                                 subdomains: ['a', 'b', 'c'],
-                                userAgentPackageName: "com.example.taxi_app",
+                                userAgentPackageName:
+                                    "com.example.taxi_app/1.0 (olverarcedev@gmail.com)",
                               ),
                               driverTrip.coordinates.isEmpty
                                   ? SizedBox()
